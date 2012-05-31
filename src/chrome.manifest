@@ -1,0 +1,6 @@
+content   doubanfmdownload                content/
+skin      doubanfmdownload  classic/1.0   skin/
+locale    doubanfmdownload  en-US         locale/en-US/
+locale    doubanfmdownload  zh-CN         locale/zh-CN/
+
+overlay chrome://browser/content/browser.xul  chrome://doubanfmdownload/content/browserOverlay.xul

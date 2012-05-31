@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="chrome://global/skin/" ?>
+<?xml-stylesheet type="text/css"
+  href="chrome://doubanfmdownload/skin/browserOverlay.css" ?>
+
+<!DOCTYPE overlay SYSTEM
+  "chrome://doubanfmdownload/locale/browserOverlay.dtd">
+<dialog id="doubanfmdownload-option-dialog" width="500" height="150"
+    onload="DoubanFmDownload.doubanOptionInit();" title="&doubanfmdownload.menue.setting;" buttons="accept,cancel"
+     ondialogaccept="return DoubanFmDownload.doubanOptionAccept();" ondialogcancel="return DoubanFmDownload.doubanOptionCancel();"
+            xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <script type="application/x-javascript" src="chrome://doubanfmdownload/content/browser.js"></script>
+    <groupbox>
+        <hbox>
+            <label value="&doubanfmdownload.menue.savepath;" align="baseline"/>
+            <textbox id="doubanfm_save_folder_control" readonly="true" flex="1"/>
+            <button id="browse_button" oncommand="DoubanFmDownload.doubanOptionFolderChoose();" label="&doubanfmdownload.menue.choose;"/>
+        </hbox>
+    </groupbox>
+</dialog>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet type="text/css" href="chrome://global/skin/" ?>
+<?xml-stylesheet type="text/css"
+  href="chrome://doubanfmdownload/skin/browserOverlay.css" ?>
+
+<!DOCTYPE overlay SYSTEM
+  "chrome://doubanfmdownload/locale/browserOverlay.dtd">
+
+<overlay id="doubanfmdownload-browser-overlay"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script type="application/x-javascript" src="chrome://doubanfmdownload/content/browser.js"></script>
+  <stringbundleset id="stringbundleset">
+      <stringbundle id="doubanfmdownload-string-bundle"
+                    src="chrome://doubanfmdownload/locale/browserOverlay.properties" />
+  </stringbundleset>
+  <commandset>
+    <command id="cmd_doubanfmdownload_open" oncommand="DoubanFmDownload.doubanOpen(event);"/>
+    <command id="cmd_doubanfmdownload_option" oncommand="DoubanFmDownload.doubanOption();"/>
+  </commandset>
+  <menupopup id="menu_ToolsPopup">
+    <menuseparator/>
+    <menu id="doubanfmdownload_menu_id" label="&doubanfmdownload.menue.label;">
+          <menupopup>
+            <menuitem command="cmd_doubanfmdownload_open" id="doubanfmdownload_menu_on_id" autocheck="false" type="checkbox" label="&doubanfmdownload.menue.on;"/>
+            <menuitem  command="cmd_doubanfmdownload_option" id="doubanfmdownload_menu_set_id" label="&doubanfmdownload.menue.setting;"/>
+          </menupopup>
+    </menu>
+  </menupopup>
+</overlay>
